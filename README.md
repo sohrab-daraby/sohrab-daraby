@@ -1,63 +1,64 @@
 <div align="center">
 
-  <!-- ═══════════════════ NOVA OFFICIAL HERO BANNER ═══════════════════ -->
+  <!-- ═══════════════════ HERO BANNER ═══════════════════ -->
   <a href="https://github.com/sohrab-daraby">
-    <img src="./assets/hero-banner.svg" width="100%" alt="TEAM NOVA // High-Performance Backend & Cloud Architecture" />
+    <img src="./assets/hero-banner.svg" width="100%" alt="Sohrab Darabi — Backend &amp; Cloud Systems Engineer" />
   </a>
 
   <br><br>
 
-  <!-- ═══════════════════ EXECUTIVE TEAM BADGES ═══════════════════ -->
+  <!-- ═══════════════════ CHIC MINIMAL BADGES ═══════════════════ -->
   <p align="center">
-    <img src="https://img.shields.io/badge/TEAM-NOVA-38bdf8?style=for-the-badge&logo=target&logoColor=white&labelColor=0a0f1d" alt="Team Nova" />
-    <img src="https://img.shields.io/badge/ROLE-LEAD%20ARCHITECT-818cf8?style=for-the-badge&logo=codewars&logoColor=white&labelColor=0a0f1d" alt="Lead Architect" />
     <a href="mailto:sohrabdarabyy@gmail.com">
-      <img src="https://img.shields.io/badge/TRANSMIT-sohrabdarabyy%40gmail.com-10b981?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0f1d" alt="Email" />
+      <img src="https://img.shields.io/badge/EMAIL-sohrabdarabyy%40gmail.com-1e293b?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0f172a" alt="Email" />
     </a>
     <a href="https://linkedin.com">
-      <img src="https://img.shields.io/badge/CONNECT-LINKEDIN-0077b5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0f1d" alt="LinkedIn" />
+      <img src="https://img.shields.io/badge/LINKEDIN-CONNECT-1e293b?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0f172a" alt="LinkedIn" />
     </a>
-    <img src="https://img.shields.io/badge/LOCATION-GLOBAL%20%2F%20REMOTE-f59e0b?style=for-the-badge&logo=google-maps&logoColor=white&labelColor=0a0f1d" alt="Location" />
+    <a href="https://github.com/sohrab-daraby">
+      <img src="https://img.shields.io/badge/GITHUB-PROFILE-1e293b?style=for-the-badge&logo=github&logoColor=white&labelColor=0f172a" alt="GitHub" />
+    </a>
+    <img src="https://img.shields.io/badge/LOCATION-REMOTE%20%2F%20GLOBAL-1e293b?style=for-the-badge&logo=google-maps&logoColor=white&labelColor=0f172a" alt="Location" />
   </p>
 
   <br>
 
-  <!-- ═══════════════════ NOVA STUDIO WORKSTATION BIO ═══════════════════ -->
-  <img src="./assets/terminal-bio.svg" width="100%" alt="Team Nova Workstation Specification" />
+  <!-- ═══════════════════ STUDIO ARCHITECTURE BIO ═══════════════════ -->
+  <img src="./assets/terminal-bio.svg" width="100%" alt="Sohrab Darabi — Engineering Studio Profile" />
 
   <br><br>
 
-  <!-- ═══════════════════ CLOUD RADAR & TELEMETRY ═══════════════════ -->
-  <img src="./assets/cloud-telemetry.svg" width="100%" alt="Nova Cloud Architecture Telemetry Radar" />
+  <!-- ═══════════════════ CLOUD ARCHITECTURE & TELEMETRY ═══════════════════ -->
+  <img src="./assets/cloud-telemetry.svg" width="100%" alt="Cloud Architecture &amp; Service Topology" />
 
   <br><br>
 
-  <!-- ═══════════════════ ENGINEERING ARSENAL MATRIX ═══════════════════ -->
-  <img src="./assets/skills-matrix.svg" width="100%" alt="Production-Hardened Engineering Arsenal" />
+  <!-- ═══════════════════ TECHNICAL ARSENAL ═══════════════════ -->
+  <img src="./assets/skills-matrix.svg" width="100%" alt="Technical Competencies &amp; Arsenal" />
 
   <br><br>
 
-  <!-- ═══════════════════ LIVE GITHUB TELEMETRY & STATS ═══════════════════ -->
-  <table width="100%" style="background-color: #070b16; border: 1px solid #1e293b; border-radius: 10px; margin-top: 10px;">
+  <!-- ═══════════════════ REAL-TIME GITHUB TELEMETRY ═══════════════════ -->
+  <table width="100%" style="background-color: #0a0c14; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; margin-top: 8px;">
     <tr>
-      <td align="center" style="padding: 18px;">
-        <h3 style="color: #38bdf8; margin-top: 4px; margin-bottom: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 1.5px; font-size: 15px;">
-          ⚡ NOVA TELEMETRY // REAL-TIME GITHUB ACTIVITY
+      <td align="center" style="padding: 20px;">
+        <h3 style="color: #f8fafc; margin-top: 4px; margin-bottom: 14px; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; letter-spacing: 0.5px; font-size: 15px; font-weight: 600;">
+          GitHub Activity &amp; Live Telemetry
         </h3>
         <p align="center">
-          <!-- GitHub Stats Card -->
+          <!-- Stats Card -->
           <a href="https://github.com/sohrab-daraby">
-            <img src="https://github-readme-stats.vercel.app/api?username=sohrab-daraby&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=070b16&title_color=38bdf8&text_color=94a3b8&icon_color=818cf8&border_color=1e293b&locale=en" alt="Sohrab's GitHub Stats" height="175" />
+            <img src="https://github-readme-stats.vercel.app/api?username=sohrab-daraby&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=0a0c14&title_color=f8fafc&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&locale=en" alt="Sohrab's GitHub Stats" height="175" />
           </a>
-          <!-- GitHub Streak Stats -->
+          <!-- Streak Card -->
           <a href="https://github.com/sohrab-daraby">
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=sohrab-daraby&theme=dark&background=070b16&border=1e293b&stroke=38bdf8&ring=10b981&fire=818cf8&currStreakLabel=38bdf8&sideLabels=94a3b8" alt="GitHub Streak Stats" height="175" />
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=sohrab-daraby&theme=dark&background=0a0c14&border=1e293b&stroke=38bdf8&ring=10b981&fire=818cf8&currStreakLabel=f8fafc&sideLabels=94a3b8" alt="GitHub Streak Stats" height="175" />
           </a>
         </p>
         <p align="center">
-          <!-- Top Languages Card -->
+          <!-- Top Languages -->
           <a href="https://github.com/sohrab-daraby">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sohrab-daraby&layout=compact&hide_border=false&bg_color=070b16&title_color=10b981&text_color=94a3b8&border_color=1e293b" alt="Most Used Languages" height="150" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sohrab-daraby&layout=compact&hide_border=false&bg_color=0a0c14&title_color=38bdf8&text_color=94a3b8&border_color=1e293b" alt="Most Used Languages" height="145" />
           </a>
         </p>
       </td>
@@ -66,15 +67,15 @@
 
   <br><br>
 
-  <!-- ═══════════════════ ANIMATED CONTRIBUTION STREAM ═══════════════════ -->
-  <table width="100%" style="background-color: #070b16; border: 1px solid #1e293b; border-radius: 10px;">
+  <!-- ═══════════════════ CONTRIBUTION SNAKE STREAM ═══════════════════ -->
+  <table width="100%" style="background-color: #0a0c14; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px;">
     <tr>
-      <td align="center" style="padding: 18px;">
-        <h3 style="color: #10b981; margin-top: 4px; margin-bottom: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 1.5px; font-size: 15px;">
-          🐍 COMMIT STREAM TELEMETRY (CONTRIBUTION SNAKE)
+      <td align="center" style="padding: 20px;">
+        <h3 style="color: #f8fafc; margin-top: 4px; margin-bottom: 14px; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; letter-spacing: 0.5px; font-size: 15px; font-weight: 600;">
+          Contribution Timeline
         </h3>
         <p align="center">
-          <img src="https://raw.githubusercontent.com/sohrab-daraby/sohrab-daraby/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+          <img src="https://raw.githubusercontent.com/sohrab-daraby/sohrab-daraby/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake Animation" width="100%" />
         </p>
       </td>
     </tr>
@@ -82,15 +83,15 @@
 
   <br><br>
 
-  <!-- ═══════════════════ FOOTER & CORPORATE QUOTE ═══════════════════ -->
-  <table width="100%" style="background-color: #070b16; border: 1px solid #1e293b; border-radius: 10px;">
+  <!-- ═══════════════════ MINIMALIST SIGNATURE FOOTER ═══════════════════ -->
+  <table width="100%" style="background-color: #08090f; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px;">
     <tr>
-      <td align="center" style="padding: 22px;">
-        <p style="color: #94a3b8; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; margin: 0; letter-spacing: 0.5px;">
-          <i>"Simplicity is the prerequisite for reliability. We engineer systems that scale effortlessly."</i>
+      <td align="center" style="padding: 24px;">
+        <p style="color: #cbd5e1; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 14px; margin: 0; font-weight: 400;">
+          <i>"Simplicity is prerequisite for reliability."</i>
         </p>
-        <p style="color: #38bdf8; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 10px; margin-bottom: 0; letter-spacing: 2px; font-weight: 700;">
-          [ TEAM NOVA // ALL CLUSTERS OPERATIONAL // 2026 ]
+        <p style="color: #64748b; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 10px; margin-bottom: 0; letter-spacing: 1px;">
+          Sohrab Darabi · Distributed Systems &amp; Cloud Architecture · 2026
         </p>
       </td>
     </tr>

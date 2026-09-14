@@ -1,216 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" width="100%" height="330">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 310" width="100%" height="310">
   <defs>
-    <linearGradient id="proMatrixGlass" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070b16" />
-      <stop offset="50%" stop-color="#0a1022" />
-      <stop offset="100%" stop-color="#04060f" />
+    <!-- Matte Dark Glass Background -->
+    <linearGradient id="skillsCleanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0e17" />
+      <stop offset="50%" stop-color="#090b12" />
+      <stop offset="100%" stop-color="#05060a" />
     </linearGradient>
 
-    <linearGradient id="proCardBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c172e" />
-      <stop offset="100%" stop-color="#080f20" />
-    </linearGradient>
-
-    <linearGradient id="proCardIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141432" />
-      <stop offset="100%" stop-color="#0a0a1f" />
-    </linearGradient>
-
-    <linearGradient id="proCardGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a1f1a" />
-      <stop offset="100%" stop-color="#061411" />
-    </linearGradient>
-
-    <linearGradient id="proCardAmber" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1f180a" />
-      <stop offset="100%" stop-color="#120e06" />
-    </linearGradient>
-
-    <filter id="softPillGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
+    <!-- Clean Hover/Pulse Animation for Cards -->
     <style>
-      @keyframes pillPulseBlue {
-        0%, 100% { stroke-opacity: 0.6; }
-        50% { stroke-opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
-      }
-      @keyframes pillPulseIndigo {
-        0%, 100% { stroke-opacity: 0.6; }
-        50% { stroke-opacity: 1; filter: drop-shadow(0 0 6px #818cf8); }
-      }
-      @keyframes pillPulseGreen {
-        0%, 100% { stroke-opacity: 0.6; }
-        50% { stroke-opacity: 1; filter: drop-shadow(0 0 6px #10b981); }
-      }
-      @keyframes pillPulseAmber {
-        0%, 100% { stroke-opacity: 0.6; }
-        50% { stroke-opacity: 1; filter: drop-shadow(0 0 6px #f59e0b); }
+      @keyframes softCardPulse {
+        0%, 100% { stroke-opacity: 0.08; }
+        50% { stroke-opacity: 0.22; }
       }
 
-      .pulse-blue { animation: pillPulseBlue 3.2s ease-in-out infinite; }
-      .pulse-indigo { animation: pillPulseIndigo 3.2s ease-in-out infinite 0.8s; }
-      .pulse-green { animation: pillPulseGreen 3.2s ease-in-out infinite 1.6s; }
-      .pulse-amber { animation: pillPulseAmber 3.2s ease-in-out infinite 2.4s; }
+      .card-box {
+        animation: softCardPulse 4s ease-in-out infinite;
+      }
+      .card-b1 { animation-delay: 0s; }
+      .card-b2 { animation-delay: 1s; }
+      .card-b3 { animation-delay: 2s; }
+      .card-b4 { animation-delay: 3s; }
 
-      .pro-mono-chip {
-        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      .skills-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      }
+      .skills-mono {
+        font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
       }
     </style>
   </defs>
 
-  <!-- Frame Background -->
-  <rect width="880" height="330" rx="14" fill="url(#proMatrixGlass)" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Base Container -->
+  <rect width="880" height="310" rx="14" fill="url(#skillsCleanBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
 
-  <!-- Header Bar -->
-  <g class="pro-mono-chip" font-size="11">
-    <path d="M 0 14 C 0 6.26 6.26 0 14 0 L 866 0 C 873.74 0 880 6.26 880 14 L 880 38 L 0 38 Z" fill="#0b1224" stroke="#1e293b" stroke-width="1" />
-    
-    <circle cx="28" cy="19" r="4.5" fill="#38bdf8" filter="url(#softPillGlow)" />
-    <text x="44" y="23" fill="#38bdf8" font-weight="700" letter-spacing="1">NOVA ENGINEERING ARSENAL // PRODUCTION-HARDENED TECH STACK</text>
-
-    <text x="850" y="23" fill="#64748b" text-anchor="end">TIER-1 ARCHITECTURE</text>
+  <!-- Top Title Bar -->
+  <g transform="translate(32, 28)" class="skills-sans">
+    <circle cx="0" cy="0" r="4" fill="#38bdf8" />
+    <text x="12" y="4" font-size="12" font-weight="700" fill="#f8fafc" letter-spacing="0.5">
+      CORE COMPETENCIES &amp; TECHNICAL ARSENAL
+    </text>
+    <text x="816" y="4" font-size="11" font-weight="500" fill="#64748b" text-anchor="end">
+      Enterprise &amp; Distributed Systems
+    </text>
   </g>
 
-  <!-- GRID: 4 Executive Glass Modules -->
+  <line x1="32" y1="46" x2="848" y2="46" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
 
-  <!-- MODULE 01: Core Backend Engines (Blue) -->
-  <g transform="translate(24, 54)">
-    <rect x="0" y="0" width="404" height="122" rx="10" fill="url(#proCardBlue)" stroke="#38bdf8" stroke-width="1.2" class="pulse-blue" />
+  <!-- GRID OF 4 MINIMALIST CARDS -->
+
+  <!-- CARD 01: Core Languages & Runtimes -->
+  <g transform="translate(32, 60)" class="skills-sans">
+    <rect x="0" y="0" width="398" height="110" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#38bdf8" stroke-width="1" class="card-box card-b1" />
     
-    <text x="18" y="24" class="pro-mono-chip" font-size="11" fill="#38bdf8" font-weight="800" letter-spacing="0.8">
-      [01] CORE ENGINES &amp; DISTRIBUTED RUNTIMES
+    <!-- Header -->
+    <circle cx="18" cy="20" r="3" fill="#38bdf8" />
+    <text x="28" y="24" font-size="11" font-weight="700" fill="#f1f5f9" letter-spacing="0.2">
+      Languages &amp; Core Engines
     </text>
-    <line x1="18" y1="34" x2="386" y2="34" stroke="#172b4c" stroke-width="1" />
 
-    <g transform="translate(18, 48)" class="pro-mono-chip" font-size="10.5">
+    <!-- Tech Badges -->
+    <g transform="translate(18, 40)" class="skills-mono" font-size="11">
       <!-- Go -->
-      <rect x="0" y="0" width="82" height="30" rx="6" fill="#0f2240" stroke="#00add8" stroke-width="1.2" />
-      <circle cx="12" cy="15" r="3" fill="#00add8" filter="url(#softPillGlow)" />
-      <text x="24" y="19" fill="#ffffff" font-weight="700">Golang</text>
+      <rect x="0" y="0" width="76" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="12" cy="14" r="3" fill="#00add8" />
+      <text x="22" y="18" fill="#f8fafc" font-weight="600">Golang</text>
 
       <!-- Python -->
-      <rect x="92" y="0" width="86" height="30" rx="6" fill="#0f2240" stroke="#3776ab" stroke-width="1.2" />
-      <circle cx="104" cy="15" r="3" fill="#ffd43b" />
-      <text x="116" y="19" fill="#ffffff" font-weight="700">Python</text>
+      <rect x="84" y="0" width="82" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="96" cy="14" r="3" fill="#38bdf8" />
+      <text x="106" y="18" fill="#f8fafc" font-weight="600">Python</text>
 
       <!-- Rust -->
-      <rect x="188" y="0" width="76" height="30" rx="6" fill="#0f2240" stroke="#dea584" stroke-width="1.2" />
-      <circle cx="200" cy="15" r="3" fill="#dea584" />
-      <text x="212" y="19" fill="#ffffff" font-weight="700">Rust</text>
+      <rect x="174" y="0" width="72" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="186" cy="14" r="3" fill="#f97316" />
+      <text x="196" y="18" fill="#f8fafc" font-weight="600">Rust</text>
 
       <!-- TypeScript -->
-      <rect x="274" y="0" width="94" height="30" rx="6" fill="#0f2240" stroke="#3178c6" stroke-width="1.2" />
-      <circle cx="286" cy="15" r="3" fill="#3178c6" />
-      <text x="298" y="19" fill="#ffffff" font-weight="700">Node / TS</text>
+      <rect x="254" y="0" width="108" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="266" cy="14" r="3" fill="#3178c6" />
+      <text x="276" y="18" fill="#f8fafc" font-weight="600">TypeScript</text>
 
-      <text x="0" y="52" font-size="9" fill="#94a3b8">Concurrency // Low Latency // Goroutines // Memory Safety</text>
+      <!-- Subtitle -->
+      <text x="0" y="50" font-size="9" fill="#64748b" class="skills-sans">
+        Concurrency · Goroutines · Memory Safety · Asynchronous I/O
+      </text>
     </g>
   </g>
 
-  <!-- MODULE 02: Cloud & DevOps Orchestration (Indigo) -->
-  <g transform="translate(452, 54)">
-    <rect x="0" y="0" width="404" height="122" rx="10" fill="url(#proCardIndigo)" stroke="#818cf8" stroke-width="1.2" class="pulse-indigo" />
+  <!-- CARD 02: Cloud & Infrastructure -->
+  <g transform="translate(450, 60)" class="skills-sans">
+    <rect x="0" y="0" width="398" height="110" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#818cf8" stroke-width="1" class="card-box card-b2" />
     
-    <text x="18" y="24" class="pro-mono-chip" font-size="11" fill="#818cf8" font-weight="800" letter-spacing="0.8">
-      [02] CLOUD INFRASTRUCTURE &amp; ORCHESTRATION
+    <circle cx="18" cy="20" r="3" fill="#818cf8" />
+    <text x="28" y="24" font-size="11" font-weight="700" fill="#f1f5f9" letter-spacing="0.2">
+      Cloud Infrastructure &amp; DevOps
     </text>
-    <line x1="18" y1="34" x2="386" y2="34" stroke="#25244f" stroke-width="1" />
 
-    <g transform="translate(18, 48)" class="pro-mono-chip" font-size="10.5">
+    <g transform="translate(18, 40)" class="skills-mono" font-size="11">
       <!-- Kubernetes -->
-      <rect x="0" y="0" width="108" height="30" rx="6" fill="#1b1c44" stroke="#326ce5" stroke-width="1.2" />
-      <circle cx="12" cy="15" r="3" fill="#326ce5" filter="url(#softPillGlow)" />
-      <text x="24" y="19" fill="#ffffff" font-weight="700">Kubernetes</text>
+      <rect x="0" y="0" width="108" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="12" cy="14" r="3" fill="#326ce5" />
+      <text x="22" y="18" fill="#f8fafc" font-weight="600">Kubernetes</text>
 
       <!-- Docker -->
-      <rect x="118" y="0" width="86" height="30" rx="6" fill="#1b1c44" stroke="#2496ed" stroke-width="1.2" />
-      <circle cx="130" cy="15" r="3" fill="#2496ed" />
-      <text x="142" y="19" fill="#ffffff" font-weight="700">Docker</text>
+      <rect x="116" y="0" width="82" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="128" cy="14" r="3" fill="#38bdf8" />
+      <text x="138" y="18" fill="#f8fafc" font-weight="600">Docker</text>
 
       <!-- Terraform -->
-      <rect x="214" y="0" width="98" height="30" rx="6" fill="#1b1c44" stroke="#844fba" stroke-width="1.2" />
-      <circle cx="226" cy="15" r="3" fill="#844fba" />
-      <text x="238" y="19" fill="#ffffff" font-weight="700">Terraform</text>
+      <rect x="206" y="0" width="94" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="218" cy="14" r="3" fill="#844fba" />
+      <text x="228" y="18" fill="#f8fafc" font-weight="600">Terraform</text>
 
       <!-- AWS -->
-      <rect x="322" y="0" width="56" height="30" rx="6" fill="#1b1c44" stroke="#ff9900" stroke-width="1.2" />
-      <circle cx="332" cy="15" r="3" fill="#ff9900" />
-      <text x="342" y="19" fill="#ffffff" font-weight="700">AWS</text>
+      <rect x="308" y="0" width="56" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="318" cy="14" r="3" fill="#f59e0b" />
+      <text x="328" y="18" fill="#f8fafc" font-weight="600">AWS</text>
 
-      <text x="0" y="52" font-size="9" fill="#94a3b8">GitOps // Helm Charts // Multi-AZ Clusters // IaC</text>
+      <text x="0" y="50" font-size="9" fill="#64748b" class="skills-sans">
+        GitOps · Infrastructure as Code · Multi-AZ Clusters · Helm
+      </text>
     </g>
   </g>
 
-  <!-- MODULE 03: Data Storage & Streaming Mesh (Emerald Green) -->
-  <g transform="translate(24, 190)">
-    <rect x="0" y="0" width="404" height="122" rx="10" fill="url(#proCardGreen)" stroke="#10b981" stroke-width="1.2" class="pulse-green" />
+  <!-- CARD 03: Data Storage & Messaging -->
+  <g transform="translate(32, 182)" class="skills-sans">
+    <rect x="0" y="0" width="398" height="110" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#34d399" stroke-width="1" class="card-box card-b3" />
     
-    <text x="18" y="24" class="pro-mono-chip" font-size="11" fill="#10b981" font-weight="800" letter-spacing="0.8">
-      [03] DATA STORAGE &amp; EVENT-STREAMING MESH
+    <circle cx="18" cy="20" r="3" fill="#34d399" />
+    <text x="28" y="24" font-size="11" font-weight="700" fill="#f1f5f9" letter-spacing="0.2">
+      Data Tier &amp; Event Streams
     </text>
-    <line x1="18" y1="34" x2="386" y2="34" stroke="#12362b" stroke-width="1" />
 
-    <g transform="translate(18, 48)" class="pro-mono-chip" font-size="10.5">
+    <g transform="translate(18, 40)" class="skills-mono" font-size="11">
       <!-- PostgreSQL -->
-      <rect x="0" y="0" width="102" height="30" rx="6" fill="#0d2e25" stroke="#4169e1" stroke-width="1.2" />
-      <circle cx="12" cy="15" r="3" fill="#4169e1" />
-      <text x="24" y="19" fill="#ffffff" font-weight="700">PostgreSQL</text>
+      <rect x="0" y="0" width="102" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="12" cy="14" r="3" fill="#336791" />
+      <text x="22" y="18" fill="#f8fafc" font-weight="600">PostgreSQL</text>
 
       <!-- Redis -->
-      <rect x="112" y="0" width="78" height="30" rx="6" fill="#0d2e25" stroke="#dc382d" stroke-width="1.2" />
-      <circle cx="124" cy="15" r="3" fill="#dc382d" />
-      <text x="136" y="19" fill="#ffffff" font-weight="700">Redis</text>
+      <rect x="110" y="0" width="76" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="122" cy="14" r="3" fill="#ef4444" />
+      <text x="132" y="18" fill="#f8fafc" font-weight="600">Redis</text>
 
       <!-- Kafka -->
-      <rect x="200" y="0" width="88" height="30" rx="6" fill="#0d2e25" stroke="#10b981" stroke-width="1.2" />
-      <circle cx="212" cy="15" r="3" fill="#10b981" filter="url(#softPillGlow)" />
-      <text x="224" y="19" fill="#ffffff" font-weight="700">Kafka</text>
+      <rect x="194" y="0" width="86" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="206" cy="14" r="3" fill="#34d399" />
+      <text x="216" y="18" fill="#f8fafc" font-weight="600">Kafka</text>
 
       <!-- gRPC -->
-      <rect x="298" y="0" width="76" height="30" rx="6" fill="#0d2e25" stroke="#24d0d8" stroke-width="1.2" />
-      <circle cx="308" cy="15" r="3" fill="#24d0d8" />
-      <text x="320" y="19" fill="#ffffff" font-weight="700">gRPC</text>
+      <rect x="288" y="0" width="76" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="298" cy="14" r="3" fill="#06b6d4" />
+      <text x="308" y="18" fill="#f8fafc" font-weight="600">gRPC</text>
 
-      <text x="0" y="52" font-size="9" fill="#94a3b8">Protobuf // Event Sourcing // Partitioning // ACID &amp; Caching</text>
+      <text x="0" y="50" font-size="9" fill="#64748b" class="skills-sans">
+        Event Sourcing · Stream Processing · Partitioning · ACID Transactions
+      </text>
     </g>
   </g>
 
-  <!-- MODULE 04: Observability, Linux & Automation (Amber) -->
-  <g transform="translate(452, 190)">
-    <rect x="0" y="0" width="404" height="122" rx="10" fill="url(#proCardAmber)" stroke="#f59e0b" stroke-width="1.2" class="pulse-amber" />
+  <!-- CARD 04: Observability & Tooling -->
+  <g transform="translate(450, 182)" class="skills-sans">
+    <rect x="0" y="0" width="398" height="110" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#fbbf24" stroke-width="1" class="card-box card-b4" />
     
-    <text x="18" y="24" class="pro-mono-chip" font-size="11" fill="#f59e0b" font-weight="800" letter-spacing="0.8">
-      [04] OBSERVABILITY, AUTOMATION &amp; RELIABILITY
+    <circle cx="18" cy="20" r="3" fill="#fbbf24" />
+    <text x="28" y="24" font-size="11" font-weight="700" fill="#f1f5f9" letter-spacing="0.2">
+      Observability &amp; Reliability
     </text>
-    <line x1="18" y1="34" x2="386" y2="34" stroke="#38290f" stroke-width="1" />
 
-    <g transform="translate(18, 48)" class="pro-mono-chip" font-size="10.5">
+    <g transform="translate(18, 40)" class="skills-mono" font-size="11">
       <!-- Prometheus -->
-      <rect x="0" y="0" width="108" height="30" rx="6" fill="#2c220c" stroke="#e6522c" stroke-width="1.2" />
-      <circle cx="12" cy="15" r="3" fill="#e6522c" />
-      <text x="24" y="19" fill="#ffffff" font-weight="700">Prometheus</text>
+      <rect x="0" y="0" width="108" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="12" cy="14" r="3" fill="#e6522c" />
+      <text x="22" y="18" fill="#f8fafc" font-weight="600">Prometheus</text>
 
       <!-- Grafana -->
-      <rect x="118" y="0" width="90" height="30" rx="6" fill="#2c220c" stroke="#f46800" stroke-width="1.2" />
-      <circle cx="130" cy="15" r="3" fill="#f46800" />
-      <text x="142" y="19" fill="#ffffff" font-weight="700">Grafana</text>
+      <rect x="116" y="0" width="86" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="128" cy="14" r="3" fill="#f46800" />
+      <text x="138" y="18" fill="#f8fafc" font-weight="600">Grafana</text>
 
-      <!-- CI/CD Actions -->
-      <rect x="218" y="0" width="98" height="30" rx="6" fill="#2c220c" stroke="#2088ff" stroke-width="1.2" />
-      <circle cx="230" cy="15" r="3" fill="#2088ff" />
-      <text x="242" y="19" fill="#ffffff" font-weight="700">CI/CD</text>
+      <!-- CI/CD -->
+      <rect x="210" y="0" width="86" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="222" cy="14" r="3" fill="#3b82f6" />
+      <text x="232" y="18" fill="#f8fafc" font-weight="600">CI/CD</text>
 
       <!-- Linux -->
-      <rect x="326" y="0" width="58" height="30" rx="6" fill="#2c220c" stroke="#fcc624" stroke-width="1.2" />
-      <circle cx="336" cy="15" r="3" fill="#fcc624" />
-      <text x="346" y="19" fill="#ffffff" font-weight="700">Linux</text>
+      <rect x="304" y="0" width="68" height="28" rx="5" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="314" cy="14" r="3" fill="#facc15" />
+      <text x="324" y="18" fill="#f8fafc" font-weight="600">Linux</text>
 
-      <text x="0" y="52" font-size="9" fill="#94a3b8">OpenTelemetry // eBPF Tracing // Automated Pipelines // SLO</text>
+      <text x="0" y="50" font-size="9" fill="#64748b" class="skills-sans">
+        OpenTelemetry · Distributed Tracing · Automated Workflows · SLOs
+      </text>
     </g>
   </g>
 </svg>

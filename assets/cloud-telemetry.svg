@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="100%" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 290" width="100%" height="290">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="teleProBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070b16" />
-      <stop offset="60%" stop-color="#091020" />
-      <stop offset="100%" stop-color="#040710" />
+    <!-- Matte Dark Glass Background -->
+    <linearGradient id="dashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0e17" />
+      <stop offset="60%" stop-color="#090b12" />
+      <stop offset="100%" stop-color="#05060a" />
     </linearGradient>
 
-    <linearGradient id="radarSweepPro" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.55" />
-      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    <!-- Spline Area Fill Gradient -->
+    <linearGradient id="areaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
     </linearGradient>
 
-    <linearGradient id="streamWavePro" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="curveStroke" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="50%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
     </linearGradient>
 
-    <filter id="softGlowPro" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="softNodeGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -28,173 +28,155 @@
     </filter>
 
     <style>
-      @keyframes radarSweepRun {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+      @keyframes pulseNode {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.25); opacity: 1; }
       }
-      @keyframes ripplePro {
-        0% { r: 6px; opacity: 1; stroke-width: 2px; }
-        100% { r: 42px; opacity: 0; stroke-width: 0.5px; }
-      }
-      @keyframes dataStreamRun {
-        0% { stroke-dashoffset: 140; }
+      @keyframes packetTravel {
+        0% { stroke-dashoffset: 120; }
         100% { stroke-dashoffset: 0; }
       }
-      @keyframes waveStreamOsc {
-        0%, 100% { d: path("M 0 30 Q 30 8, 60 26 T 120 16 T 180 38 T 240 12 T 300 28 T 360 18 T 420 30 T 480 16 T 520 24"); }
-        50% { d: path("M 0 20 Q 30 38, 60 14 T 120 34 T 180 16 T 240 36 T 300 14 T 360 30 T 420 16 T 480 34 T 520 20"); }
+      @keyframes waveMorph {
+        0%, 100% { d: path("M 0 35 Q 35 10, 70 28 T 140 18 T 210 36 T 280 14 T 350 26 T 420 16 T 490 24 L 490 80 L 0 80 Z"); }
+        50% { d: path("M 0 25 Q 35 36, 70 16 T 140 32 T 210 18 T 280 34 T 350 16 T 420 28 T 490 18 L 490 80 L 0 80 Z"); }
+      }
+      @keyframes waveStrokeMorph {
+        0%, 100% { d: path("M 0 35 Q 35 10, 70 28 T 140 18 T 210 36 T 280 14 T 350 26 T 420 16 T 490 24"); }
+        50% { d: path("M 0 25 Q 35 36, 70 16 T 140 32 T 210 18 T 280 34 T 350 16 T 420 28 T 490 18"); }
       }
 
-      .radar-sweep-pro {
-        animation: radarSweepRun 4.5s linear infinite;
-        transform-origin: 155px 165px;
+      .node-core {
+        animation: pulseNode 3s ease-in-out infinite;
+        transform-origin: center;
       }
-      .ring-p1 { animation: ripplePro 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
-      .ring-p2 { animation: ripplePro 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite 0.8s; }
-      .ring-p3 { animation: ripplePro 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite 1.6s; }
+      .packet-link {
+        stroke-dasharray: 12 30;
+        animation: packetTravel 2.5s linear infinite;
+      }
+      .wave-area {
+        animation: waveMorph 4s ease-in-out infinite;
+      }
+      .wave-line {
+        animation: waveStrokeMorph 4s ease-in-out infinite;
+      }
 
-      .flow-path {
-        stroke-dasharray: 18 45;
-        animation: dataStreamRun 2s linear infinite;
+      .dash-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
       }
-      .wave-path-pro {
-        animation: waveStreamOsc 3s ease-in-out infinite;
-      }
-
-      .code-tele {
-        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      .dash-mono {
+        font-family: 'JetBrains Mono', 'SF Mono', monospace;
       }
     </style>
   </defs>
 
-  <!-- Frame Background -->
-  <rect width="880" height="320" rx="14" fill="url(#teleProBg)" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Container Frame -->
+  <rect width="880" height="290" rx="14" fill="url(#dashBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
 
   <!-- Top Title Bar -->
-  <g class="code-tele" font-size="11">
-    <path d="M 0 14 C 0 6.26 6.26 0 14 0 L 866 0 C 873.74 0 880 6.26 880 14 L 880 38 L 0 38 Z" fill="#0b1224" stroke="#1e293b" stroke-width="1" />
-    
-    <circle cx="28" cy="19" r="4.5" fill="#38bdf8" filter="url(#softGlowPro)" />
-    <text x="44" y="23" fill="#38bdf8" font-weight="700" letter-spacing="1">NOVA CLOUD TELEMETRY // DISTRIBUTED MESH RADAR</text>
-
-    <text x="850" y="23" fill="#10b981" text-anchor="end" font-weight="600">
-      ● 6 NODES HEALTHY // ZERO-LAG
+  <g transform="translate(32, 28)" class="dash-sans">
+    <circle cx="0" cy="0" r="4" fill="#38bdf8" />
+    <text x="12" y="4" font-size="12" font-weight="700" fill="#f8fafc" letter-spacing="0.5">
+      CLOUD ARCHITECTURE &amp; SERVICE TOPOLOGY
+    </text>
+    <text x="816" y="4" font-size="11" font-weight="500" fill="#64748b" text-anchor="end">
+      Multi-AZ Kubernetes Mesh · High Availability
     </text>
   </g>
 
-  <!-- LEFT PANE: NOVA Distributed Microservices Mesh Radar -->
-  <g transform="translate(15, 0)">
-    <!-- Range Rings -->
-    <circle cx="155" cy="165" r="32" fill="none" stroke="#1e293b" stroke-width="1" />
-    <circle cx="155" cy="165" r="70" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
-    <circle cx="155" cy="165" r="110" fill="none" stroke="#25334d" stroke-width="1.2" />
+  <line x1="32" y1="46" x2="848" y2="46" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
 
-    <!-- Crosshair Guides -->
-    <line x1="45" y1="165" x2="265" y2="165" stroke="#1e293b" stroke-width="1" />
-    <line x1="155" y1="55" x2="155" y2="275" stroke="#1e293b" stroke-width="1" />
-    <line x1="75" y1="85" x2="235" y2="245" stroke="#151f33" stroke-width="1" stroke-dasharray="3 4" />
-    <line x1="75" y1="245" x2="235" y2="85" stroke="#151f33" stroke-width="1" stroke-dasharray="3 4" />
+  <!-- LEFT SECTION: Modern Minimalist Microservices Topology -->
+  <g transform="translate(32, 60)">
+    <rect x="0" y="0" width="270" height="205" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
+    
+    <text x="16" y="24" class="dash-mono" font-size="9" fill="#64748b" font-weight="600" letter-spacing="1">
+      SERVICE MESH GRAPH
+    </text>
 
-    <!-- 360 Radar Sweep -->
-    <g class="radar-sweep-pro">
-      <path d="M 155 165 L 155 55 A 110 110 0 0 1 250 110 Z" fill="url(#radarSweepPro)" />
-      <line x1="155" y1="165" x2="250" y2="110" stroke="#38bdf8" stroke-width="1.8" filter="url(#softGlowPro)" />
+    <!-- Node Network Lines -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.2">
+      <!-- To K8s Ingress -->
+      <path d="M 135 115 C 135 75, 195 70, 205 70" />
+      <path d="M 135 115 C 135 75, 195 70, 205 70" stroke="#38bdf8" stroke-width="1.6" class="packet-link" />
+
+      <!-- To Kafka Stream -->
+      <path d="M 135 115 C 135 155, 195 160, 205 160" />
+      <path d="M 135 115 C 135 155, 195 160, 205 160" stroke="#818cf8" stroke-width="1.6" class="packet-link" />
+
+      <!-- To Postgres HA -->
+      <path d="M 135 115 C 135 155, 75 160, 65 160" />
+      <path d="M 135 115 C 135 155, 75 160, 65 160" stroke="#34d399" stroke-width="1.6" class="packet-link" />
+
+      <!-- To Redis Cache -->
+      <path d="M 135 115 C 135 75, 75 70, 65 70" />
+      <path d="M 135 115 C 135 75, 75 70, 65 70" stroke="#fbbf24" stroke-width="1.6" class="packet-link" />
     </g>
 
-    <!-- Ripple Rings -->
-    <circle cx="155" cy="165" r="8" fill="none" stroke="#38bdf8" class="ring-p1" />
-    <circle cx="155" cy="165" r="8" fill="none" stroke="#38bdf8" class="ring-p2" />
-    <circle cx="155" cy="165" r="8" fill="none" stroke="#38bdf8" class="ring-p3" />
+    <!-- Central Node: API Gateway -->
+    <circle cx="135" cy="115" r="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="135" cy="115" r="5" fill="#38bdf8" class="node-core" filter="url(#softNodeGlow)" />
+    <text x="135" y="138" class="dash-mono" font-size="8" fill="#94a3b8" text-anchor="middle" font-weight="600">GATEWAY</text>
 
-    <!-- Center Node: NOVA Gateway -->
-    <circle cx="155" cy="165" r="7" fill="#38bdf8" filter="url(#softGlowPro)" />
-    <text x="155" y="184" class="code-tele" font-size="8.5" fill="#ffffff" font-weight="700" text-anchor="middle">NOVA-GW</text>
+    <!-- Peripheral Service Nodes -->
+    <!-- Node 1: K8s Ingress -->
+    <circle cx="205" cy="70" r="8" fill="#111827" stroke="#38bdf8" stroke-width="1.2" />
+    <circle cx="205" cy="70" r="3.5" fill="#38bdf8" />
+    <text x="218" y="73" class="dash-mono" font-size="8" fill="#cbd5e1" font-weight="600">K8S</text>
 
-    <!-- Node 1: K8s Pods (Top Right) -->
-    <line x1="155" y1="165" x2="225" y2="105" stroke="#1e293b" stroke-width="1.5" />
-    <line x1="155" y1="165" x2="225" y2="105" stroke="#10b981" stroke-width="2" class="flow-path" />
-    <circle cx="225" cy="105" r="5" fill="#10b981" filter="url(#softGlowPro)" />
-    <text x="234" y="103" class="code-tele" font-size="8" fill="#10b981" font-weight="700">K8S PODS</text>
+    <!-- Node 2: Kafka -->
+    <circle cx="205" cy="160" r="8" fill="#111827" stroke="#818cf8" stroke-width="1.2" />
+    <circle cx="205" cy="160" r="3.5" fill="#818cf8" />
+    <text x="218" y="163" class="dash-mono" font-size="8" fill="#cbd5e1" font-weight="600">KAFKA</text>
 
-    <!-- Node 2: Kafka Mesh (Bottom Right) -->
-    <line x1="155" y1="165" x2="228" y2="218" stroke="#1e293b" stroke-width="1.5" />
-    <line x1="155" y1="165" x2="228" y2="218" stroke="#818cf8" stroke-width="2" class="flow-path" />
-    <circle cx="228" cy="218" r="5" fill="#818cf8" filter="url(#softGlowPro)" />
-    <text x="236" y="222" class="code-tele" font-size="8" fill="#818cf8" font-weight="700">KAFKA MESH</text>
+    <!-- Node 3: PostgreSQL -->
+    <circle cx="65" cy="160" r="8" fill="#111827" stroke="#34d399" stroke-width="1.2" />
+    <circle cx="65" cy="160" r="3.5" fill="#34d399" />
+    <text x="52" y="163" class="dash-mono" font-size="8" fill="#cbd5e1" text-anchor="end" font-weight="600">POSTGRES</text>
 
-    <!-- Node 3: Postgres HA (Bottom Left) -->
-    <line x1="155" y1="165" x2="82" y2="218" stroke="#1e293b" stroke-width="1.5" />
-    <line x1="155" y1="165" x2="82" y2="218" stroke="#38bdf8" stroke-width="2" class="flow-path" />
-    <circle cx="82" cy="218" r="5" fill="#38bdf8" filter="url(#softGlowPro)" />
-    <text x="36" y="232" class="code-tele" font-size="8" fill="#38bdf8" font-weight="700">POSTGRES HA</text>
-
-    <!-- Node 4: Redis Cluster (Top Left) -->
-    <line x1="155" y1="165" x2="85" y2="105" stroke="#1e293b" stroke-width="1.5" />
-    <line x1="155" y1="165" x2="85" y2="105" stroke="#f59e0b" stroke-width="2" class="flow-path" />
-    <circle cx="85" cy="105" r="5" fill="#f59e0b" filter="url(#softGlowPro)" />
-    <text x="44" y="98" class="code-tele" font-size="8" fill="#f59e0b" font-weight="700">REDIS MESH</text>
+    <!-- Node 4: Redis -->
+    <circle cx="65" cy="70" r="8" fill="#111827" stroke="#fbbf24" stroke-width="1.2" />
+    <circle cx="65" cy="70" r="3.5" fill="#fbbf24" />
+    <text x="52" y="73" class="dash-mono" font-size="8" fill="#cbd5e1" text-anchor="end" font-weight="600">REDIS</text>
   </g>
 
-  <!-- RIGHT PANE: Telemetry Gauges & Oscilloscope Waveform -->
-  <g transform="translate(315, 52)" class="code-tele">
-    <!-- Row 1: 3 Circular Futuristic Progress Rings -->
-    <!-- Gauge 1: Uptime SLA -->
+  <!-- RIGHT SECTION: Modern Telemetry Metrics & Clean Area Chart -->
+  <g transform="translate(325, 60)" class="dash-sans">
+    <!-- Row 1: 3 Sleek Metric Cards -->
+    <!-- Metric 1: Uptime -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="168" height="88" rx="8" fill="#090e1c" stroke="#1e293b" stroke-width="1.2" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#151f33" stroke-width="5" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#10b981" stroke-width="5" stroke-dasharray="176" stroke-dashoffset="6" stroke-linecap="round" filter="url(#softGlowPro)" transform="rotate(-90 44 44)" />
-      <text x="44" y="47" font-size="10.5" fill="#ffffff" font-weight="700" text-anchor="middle">99.9%</text>
-      <text x="86" y="36" font-size="9" fill="#94a3b8" font-weight="600">UPTIME SLA</text>
-      <text x="86" y="54" font-size="13" fill="#10b981" font-weight="800">OPTIMAL</text>
-      <text x="86" y="68" font-size="7.5" fill="#64748b">Multi-AZ SLA</text>
+      <rect x="0" y="0" width="165" height="74" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" />
+      <text x="14" y="22" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.5">SERVICE AVAILABILITY</text>
+      <text x="14" y="48" font-size="22" font-weight="800" fill="#f8fafc">99.99%</text>
+      <text x="14" y="64" font-size="9" font-weight="500" fill="#10b981">Multi-AZ SLA Active</text>
     </g>
 
-    <!-- Gauge 2: P99 Latency -->
-    <g transform="translate(182, 0)">
-      <rect x="0" y="0" width="168" height="88" rx="8" fill="#090e1c" stroke="#1e293b" stroke-width="1.2" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#151f33" stroke-width="5" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#38bdf8" stroke-width="5" stroke-dasharray="176" stroke-dashoffset="18" stroke-linecap="round" filter="url(#softGlowPro)" transform="rotate(-90 44 44)" />
-      <text x="44" y="47" font-size="10.5" fill="#ffffff" font-weight="700" text-anchor="middle">0.38ms</text>
-      <text x="86" y="36" font-size="9" fill="#94a3b8" font-weight="600">P99 LATENCY</text>
-      <text x="86" y="54" font-size="13" fill="#38bdf8" font-weight="800">&lt; 0.40 ms</text>
-      <text x="86" y="68" font-size="7.5" fill="#10b981">eBPF Optimized</text>
+    <!-- Metric 2: P99 Latency -->
+    <g transform="translate(178, 0)">
+      <rect x="0" y="0" width="165" height="74" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" />
+      <text x="14" y="22" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.5">P99 LATENCY</text>
+      <text x="14" y="48" font-size="22" font-weight="800" fill="#38bdf8">&lt; 0.8ms</text>
+      <text x="14" y="64" font-size="9" font-weight="500" fill="#60a5fa">Sub-millisecond API</text>
     </g>
 
-    <!-- Gauge 3: Throughput -->
-    <g transform="translate(364, 0)">
-      <rect x="0" y="0" width="176" height="88" rx="8" fill="#090e1c" stroke="#1e293b" stroke-width="1.2" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#151f33" stroke-width="5" />
-      <circle cx="44" cy="44" r="28" fill="none" stroke="#818cf8" stroke-width="5" stroke-dasharray="176" stroke-dashoffset="24" stroke-linecap="round" filter="url(#softGlowPro)" transform="rotate(-90 44 44)" />
-      <text x="44" y="47" font-size="10.5" fill="#ffffff" font-weight="700" text-anchor="middle">320k</text>
-      <text x="86" y="36" font-size="9" fill="#94a3b8" font-weight="600">THROUGHPUT</text>
-      <text x="86" y="54" font-size="13" fill="#818cf8" font-weight="800">320k RPS</text>
-      <text x="86" y="68" font-size="7.5" fill="#38bdf8">Kafka Partitioned</text>
+    <!-- Metric 3: Throughput Capacity -->
+    <g transform="translate(356, 0)">
+      <rect x="0" y="0" width="167" height="74" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" />
+      <text x="14" y="22" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.5">INGESTION PEAK</text>
+      <text x="14" y="48" font-size="22" font-weight="800" fill="#c084fc">120k+<tspan font-size="12" font-weight="500" fill="#64748b">/sec</tspan></text>
+      <text x="14" y="64" font-size="9" font-weight="500" fill="#a855f7">Kafka Partitioned</text>
     </g>
 
-    <!-- Row 2: Real-Time Oscilloscope Waveform & Event Feed -->
-    <g transform="translate(0, 102)">
-      <rect x="0" y="0" width="540" height="148" rx="8" fill="#090e1c" stroke="#1e293b" stroke-width="1.2" />
+    <!-- Row 2: Clean Minimalist Spline Wave Chart -->
+    <g transform="translate(0, 86)">
+      <rect x="0" y="0" width="523" height="119" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" />
       
-      <text x="16" y="22" font-size="9.5" fill="#38bdf8" font-weight="700" letter-spacing="1">EVENT-STREAM INGESTION // KAFKA PARTITION 0..15</text>
-      <text x="524" y="22" font-size="9" fill="#10b981" text-anchor="end">STREAM: ACTIVE</text>
+      <text x="16" y="22" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.5">EVENT-STREAM THROUGHPUT TELEMETRY</text>
+      <text x="507" y="22" font-size="9.5" font-weight="600" fill="#10b981" text-anchor="end">REAL-TIME</text>
 
-      <!-- Waveform Grid -->
-      <g stroke="#151f33" stroke-width="1" stroke-dasharray="3 3">
-        <line x1="16" y1="46" x2="524" y2="46" />
-        <line x1="16" y1="74" x2="524" y2="74" />
-        <line x1="16" y1="102" x2="524" y2="102" />
-      </g>
-
-      <!-- Live Oscilloscope Sine Wave Path -->
-      <g transform="translate(10, 48)">
-        <path class="wave-path-pro" fill="none" stroke="url(#streamWavePro)" stroke-width="2.5" filter="url(#softGlowPro)" />
-      </g>
-
-      <!-- Event Ticker -->
-      <g transform="translate(16, 134)" font-size="8.5">
-        <circle cx="4" cy="-3" r="3" fill="#10b981" />
-        <text x="14" y="0" fill="#94a3b8">[NOVA-MONITOR] <tspan fill="#10b981">AUTOSCALE:</tspan> All distributed clusters synchronized</text>
-        <text x="508" y="0" fill="#64748b" text-anchor="end">0.000% ERR</text>
+      <!-- Spline Chart Curve -->
+      <g transform="translate(16, 28)">
+        <path class="wave-area" fill="url(#areaFill)" />
+        <path class="wave-line" fill="none" stroke="url(#curveStroke)" stroke-width="2" />
       </g>
     </g>
   </g>
