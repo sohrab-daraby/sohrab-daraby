@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- ═══════════════════ CYBERPUNK HERO BANNER ═══════════════════ -->
-  <a href="https://github.com/sohrabdarabi">
+  <a href="https://github.com/sohrab-daraby">
     <img src="./assets/hero-banner.svg" width="100%" alt="Sohrab Darabi // Senior Backend & Cloud DevOps Architect" />
   </a>
 
@@ -45,19 +45,19 @@
 
   <p align="center">
     <!-- GitHub Stats Card -->
-    <a href="https://github.com/sohrabdarabi">
-      <img src="https://github-readme-stats.vercel.app/api?username=sohrabdarabi&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=050811&title_color=00f2fe&text_color=88a0c7&icon_color=b827fc&border_color=1a2d54&locale=en" alt="Sohrab's GitHub Stats" height="175" />
+    <a href="https://github.com/sohrab-daraby">
+      <img src="https://github-readme-stats.vercel.app/api?username=sohrab-daraby&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=050811&title_color=00f2fe&text_color=88a0c7&icon_color=b827fc&border_color=1a2d54&locale=en" alt="Sohrab's GitHub Stats" height="175" />
     </a>
     <!-- GitHub Streak Stats -->
-    <a href="https://github.com/sohrabdarabi">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=sohrabdarabi&theme=dark&background=050811&border=1a2d54&stroke=00f2fe&ring=00ffb3&fire=f246fe&currStreakLabel=00f2fe&sideLabels=88a0c7" alt="GitHub Streak Stats" height="175" />
+    <a href="https://github.com/sohrab-daraby">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=sohrab-daraby&theme=dark&background=050811&border=1a2d54&stroke=00f2fe&ring=00ffb3&fire=f246fe&currStreakLabel=00f2fe&sideLabels=88a0c7" alt="GitHub Streak Stats" height="175" />
     </a>
   </p>
 
   <p align="center">
     <!-- Top Languages Card -->
-    <a href="https://github.com/sohrabdarabi">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sohrabdarabi&layout=compact&hide_border=false&bg_color=050811&title_color=00ffb3&text_color=88a0c7&border_color=1a2d54" alt="Most Used Languages" height="150" />
+    <a href="https://github.com/sohrab-daraby">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sohrab-daraby&layout=compact&hide_border=false&bg_color=050811&title_color=00ffb3&text_color=88a0c7&border_color=1a2d54" alt="Most Used Languages" height="150" />
     </a>
   </p>
 
@@ -69,7 +69,7 @@
   </h3>
 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/sohrabdarabi/sohrabdarabi/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+    <img src="https://raw.githubusercontent.com/sohrab-daraby/sohrab-daraby/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
   </p>
 
   <br>
