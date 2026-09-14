@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="100%" height="300">
+  <defs>
+    <linearGradient id="skillsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050813" />
+      <stop offset="50%" stop-color="#091122" />
+      <stop offset="100%" stop-color="#040710" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b827fc" />
+      <stop offset="100%" stop-color="#f246fe" />
+    </linearGradient>
+
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffb3" />
+      <stop offset="100%" stop-color="#00ff88" />
+    </linearGradient>
+
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb703" />
+      <stop offset="100%" stop-color="#fb8500" />
+    </linearGradient>
+
+    <filter id="badgeGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes chipPulse {
+        0%, 100% { border-color: #1b335a; stroke-opacity: 0.6; }
+        50% { stroke-opacity: 1; filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.4)); }
+      }
+
+      .matrix-font {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', monospace;
+      }
+      .card-chip {
+        animation: chipPulse 4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer Card Housing -->
+  <rect width="880" height="300" rx="14" fill="url(#skillsBg)" stroke="#182c50" stroke-width="1.5" />
+
+  <!-- Top Title Bar -->
+  <g class="matrix-font" font-size="11">
+    <rect x="0" y="0" width="880" height="36" rx="14" fill="#0b152b" fill-opacity="0.9" />
+    <path d="M 0 36 L 880 36" stroke="#1c305a" stroke-width="1" />
+    
+    <circle cx="28" cy="18" r="4" fill="#00f2fe" filter="url(#badgeGlow)" />
+    <text x="42" y="22" fill="#00f2fe" font-weight="700" letter-spacing="1">ARSENAL &amp; ARCHITECTURE STACK // SPECIALIZED WEAPONRY</text>
+    
+    <text x="850" y="22" fill="#5879a8" text-anchor="end">PRODUCTION-HARDENED</text>
+  </g>
+
+  <!-- Category 1: Languages & Core Backend -->
+  <g transform="translate(28, 52)" class="matrix-font">
+    <text x="0" y="14" font-size="11.5" fill="#00f2fe" font-weight="700" letter-spacing="0.8">
+      [01] CORE ENGINES &amp; BACKEND
+    </text>
+    <line x1="0" y1="22" x2="390" y2="22" stroke="#16294a" stroke-width="1" />
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 32)">
+      <!-- Go -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="88" height="32" rx="6" fill="#091428" stroke="#00add8" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#00add8" filter="url(#badgeGlow)" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Go</text>
+      </g>
+      <!-- Python -->
+      <g transform="translate(98, 0)">
+        <rect x="0" y="0" width="94" height="32" rx="6" fill="#091428" stroke="#3776ab" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#ffd43b" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Python</text>
+      </g>
+      <!-- Rust -->
+      <g transform="translate(202, 0)">
+        <rect x="0" y="0" width="88" height="32" rx="6" fill="#091428" stroke="#dea584" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#dea584" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Rust</text>
+      </g>
+      <!-- TypeScript -->
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="95" height="32" rx="6" fill="#091428" stroke="#3178c6" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#3178c6" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Node/TS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Category 2: Cloud, DevOps & Infrastructure -->
+  <g transform="translate(460, 52)" class="matrix-font">
+    <text x="0" y="14" font-size="11.5" fill="#b827fc" font-weight="700" letter-spacing="0.8">
+      [02] CLOUD ORCHESTRATION &amp; DEVOPS
+    </text>
+    <line x1="0" y1="22" x2="390" y2="22" stroke="#16294a" stroke-width="1" />
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 32)">
+      <!-- Kubernetes -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="112" height="32" rx="6" fill="#130d2a" stroke="#326ce5" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#326ce5" filter="url(#badgeGlow)" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Kubernetes</text>
+      </g>
+      <!-- Docker -->
+      <g transform="translate(122, 0)">
+        <rect x="0" y="0" width="94" height="32" rx="6" fill="#130d2a" stroke="#2496ed" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#2496ed" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Docker</text>
+      </g>
+      <!-- Terraform -->
+      <g transform="translate(226, 0)">
+        <rect x="0" y="0" width="102" height="32" rx="6" fill="#130d2a" stroke="#844fba" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#844fba" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Terraform</text>
+      </g>
+      <!-- AWS -->
+      <g transform="translate(338, 0)">
+        <rect x="0" y="0" width="65" height="32" rx="6" fill="#130d2a" stroke="#ff9900" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#ff9900" />
+        <text x="24" y="20" font-size="10.5" fill="#ffffff" font-weight="700">AWS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Category 3: Databases & Messaging Mesh -->
+  <g transform="translate(28, 172)" class="matrix-font">
+    <text x="0" y="14" font-size="11.5" fill="#00ffb3" font-weight="700" letter-spacing="0.8">
+      [03] DATA STORAGE &amp; EVENT STREAMS
+    </text>
+    <line x1="0" y1="22" x2="390" y2="22" stroke="#16294a" stroke-width="1" />
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 32)">
+      <!-- PostgreSQL -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="108" height="32" rx="6" fill="#071b18" stroke="#4169e1" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#4169e1" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">PostgreSQL</text>
+      </g>
+      <!-- Redis -->
+      <g transform="translate(118, 0)">
+        <rect x="0" y="0" width="86" height="32" rx="6" fill="#071b18" stroke="#dc382d" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#dc382d" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Redis</text>
+      </g>
+      <!-- Kafka -->
+      <g transform="translate(214, 0)">
+        <rect x="0" y="0" width="92" height="32" rx="6" fill="#071b18" stroke="#00ffb3" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#00ffb3" filter="url(#badgeGlow)" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Kafka</text>
+      </g>
+      <!-- gRPC -->
+      <g transform="translate(316, 0)">
+        <rect x="0" y="0" width="80" height="32" rx="6" fill="#071b18" stroke="#244c5a" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#24d0d8" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">gRPC</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Category 4: Observability, Linux & CI/CD -->
+  <g transform="translate(460, 172)" class="matrix-font">
+    <text x="0" y="14" font-size="11.5" fill="#ffb703" font-weight="700" letter-spacing="0.8">
+      [04] OBSERVABILITY &amp; AUTOMATION
+    </text>
+    <line x1="0" y1="22" x2="390" y2="22" stroke="#16294a" stroke-width="1" />
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 32)">
+      <!-- Prometheus -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="112" height="32" rx="6" fill="#1c1608" stroke="#e6522c" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#e6522c" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Prometheus</text>
+      </g>
+      <!-- Grafana -->
+      <g transform="translate(122, 0)">
+        <rect x="0" y="0" width="94" height="32" rx="6" fill="#1c1608" stroke="#f46800" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#f46800" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Grafana</text>
+      </g>
+      <!-- CI/CD GitHub Actions -->
+      <g transform="translate(226, 0)">
+        <rect x="0" y="0" width="114" height="32" rx="6" fill="#1c1608" stroke="#2088ff" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#2088ff" />
+        <text x="26" y="20" font-size="10.5" fill="#ffffff" font-weight="700">CI/CD Actions</text>
+      </g>
+      <!-- Linux Kernel -->
+      <g transform="translate(350, 0)">
+        <rect x="0" y="0" width="60" height="32" rx="6" fill="#1c1608" stroke="#fcc624" stroke-width="1.2" />
+        <circle cx="14" cy="16" r="3.5" fill="#fcc624" />
+        <text x="24" y="20" font-size="10.5" fill="#ffffff" font-weight="700">Linux</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="28" y1="274" x2="852" y2="274" stroke="#132442" stroke-width="1" />
+  <circle cx="440" cy="274" r="3" fill="#00f2fe" filter="url(#badgeGlow)" />
+</svg>

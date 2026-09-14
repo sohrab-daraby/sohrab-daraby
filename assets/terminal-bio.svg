@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 370" width="100%" height="370">
+  <defs>
+    <!-- Background and Window Gradients -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18" />
+      <stop offset="50%" stop-color="#0a1224" />
+      <stop offset="100%" stop-color="#050912" />
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0e182e" />
+      <stop offset="100%" stop-color="#14213d" />
+    </linearGradient>
+
+    <linearGradient id="accentCyanPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#f246fe" />
+    </linearGradient>
+
+    <filter id="termGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes blinkCursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      @keyframes ledPulseGreen {
+        0%, 100% { opacity: 1; fill: #00ff9d; }
+        50% { opacity: 0.25; fill: #008850; }
+      }
+
+      @keyframes ledPulseCyan {
+        0%, 100% { opacity: 1; fill: #00f2fe; }
+        50% { opacity: 0.2; fill: #006080; }
+      }
+
+      @keyframes ledPulsePink {
+        0%, 100% { opacity: 1; fill: #f246fe; }
+        50% { opacity: 0.3; fill: #801088; }
+      }
+
+      @keyframes typeIn1 { 0% { opacity: 0; transform: translateX(-6px); } 100% { opacity: 1; transform: translateX(0); } }
+      @keyframes typeIn2 { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+      .cursor { animation: blinkCursor 1s step-end infinite; }
+      .led-g { animation: ledPulseGreen 1.4s ease-in-out infinite; }
+      .led-c { animation: ledPulseCyan 1.8s ease-in-out infinite 0.3s; }
+      .led-p { animation: ledPulsePink 1.2s ease-in-out infinite 0.6s; }
+
+      .line-anim-1 { animation: typeIn1 0.4s ease-out 0.1s both; }
+      .line-anim-2 { animation: typeIn1 0.4s ease-out 0.25s both; }
+      .line-anim-3 { animation: typeIn1 0.4s ease-out 0.4s both; }
+      .line-anim-4 { animation: typeIn1 0.4s ease-out 0.55s both; }
+      .line-anim-5 { animation: typeIn1 0.4s ease-out 0.7s both; }
+      .line-anim-6 { animation: typeIn1 0.4s ease-out 0.85s both; }
+      .line-anim-7 { animation: typeIn1 0.4s ease-out 1.0s both; }
+      .line-anim-8 { animation: typeIn1 0.4s ease-out 1.15s both; }
+      .line-anim-9 { animation: typeIn1 0.4s ease-out 1.3s both; }
+      .line-anim-10 { animation: typeIn1 0.4s ease-out 1.45s both; }
+
+      .code-font {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', Consolas, monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Outer Frame -->
+  <rect width="880" height="370" rx="12" fill="url(#termBg)" stroke="#1a2d54" stroke-width="1.6" />
+
+  <!-- Terminal Title Bar -->
+  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 868 0 C 874.63 0 880 5.37 880 12 L 880 38 L 0 38 Z" fill="url(#barGrad)" stroke="#1a2d54" stroke-width="1" />
+
+  <!-- Window Action Buttons (Glowing Cyber Dots) -->
+  <circle cx="24" cy="19" r="6" fill="#ff5f56" stroke="#e0443e" stroke-width="0.8" />
+  <circle cx="44" cy="19" r="6" fill="#ffbd2e" stroke="#dea123" stroke-width="0.8" />
+  <circle cx="64" cy="19" r="6" fill="#27c93f" stroke="#1aab29" stroke-width="0.8" />
+
+  <!-- Window Header Title & Git Status -->
+  <g class="code-font" font-size="11.5">
+    <text x="440" y="23" fill="#8ca8d4" text-anchor="middle" font-weight="600" letter-spacing="0.8">
+      sohrab@hypercloud-k8s: ~ (zsh) — <tspan fill="#00ff9d">git:(main*)</tspan>
+    </text>
+    <text x="856" y="23" fill="#57749f" text-anchor="end" font-size="10">UTF-8 // 64-bit</text>
+  </g>
+
+  <!-- Left Column: Server Cluster ASCII / Hologram Node Art -->
+  <g transform="translate(32, 58)">
+    <!-- Server Stack Outer Housing -->
+    <rect x="0" y="0" width="220" height="288" rx="8" fill="#070e1c" stroke="#19315b" stroke-width="1.2" />
+
+    <!-- Server Rack 1 -->
+    <g transform="translate(12, 16)">
+      <rect x="0" y="0" width="196" height="42" rx="4" fill="#0c1830" stroke="#1f427a" stroke-width="1" />
+      <line x1="8" y1="21" x2="110" y2="21" stroke="#254a85" stroke-width="1" stroke-dasharray="3 3" />
+      <!-- LEDs -->
+      <circle cx="130" cy="21" r="3.5" class="led-g" filter="url(#termGlow)" />
+      <circle cx="146" cy="21" r="3.5" class="led-c" filter="url(#termGlow)" />
+      <circle cx="162" cy="21" r="3.5" class="led-p" filter="url(#termGlow)" />
+      <circle cx="178" cy="21" r="3.5" class="led-g" />
+      <text x="12" y="15" class="code-font" font-size="9" fill="#00f2fe" font-weight="700">NODE 01: API-GW</text>
+    </g>
+
+    <!-- Server Rack 2 -->
+    <g transform="translate(12, 68)">
+      <rect x="0" y="0" width="196" height="42" rx="4" fill="#0c1830" stroke="#1f427a" stroke-width="1" />
+      <line x1="8" y1="21" x2="110" y2="21" stroke="#254a85" stroke-width="1" stroke-dasharray="3 3" />
+      <circle cx="130" cy="21" r="3.5" class="led-c" filter="url(#termGlow)" />
+      <circle cx="146" cy="21" r="3.5" class="led-c" filter="url(#termGlow)" />
+      <circle cx="162" cy="21" r="3.5" class="led-g" />
+      <circle cx="178" cy="21" r="3.5" class="led-p" filter="url(#termGlow)" />
+      <text x="12" y="15" class="code-font" font-size="9" fill="#00ffb3" font-weight="700">NODE 02: KAFKA-BUS</text>
+    </g>
+
+    <!-- Server Rack 3 -->
+    <g transform="translate(12, 120)">
+      <rect x="0" y="0" width="196" height="42" rx="4" fill="#0c1830" stroke="#1f427a" stroke-width="1" />
+      <line x1="8" y1="21" x2="110" y2="21" stroke="#254a85" stroke-width="1" stroke-dasharray="3 3" />
+      <circle cx="130" cy="21" r="3.5" class="led-p" filter="url(#termGlow)" />
+      <circle cx="146" cy="21" r="3.5" class="led-g" filter="url(#termGlow)" />
+      <circle cx="162" cy="21" r="3.5" class="led-g" />
+      <circle cx="178" cy="21" r="3.5" class="led-c" />
+      <text x="12" y="15" class="code-font" font-size="9" fill="#f246fe" font-weight="700">NODE 03: POSTGRES-HA</text>
+    </g>
+
+    <!-- Server Rack 4 -->
+    <g transform="translate(12, 172)">
+      <rect x="0" y="0" width="196" height="42" rx="4" fill="#0c1830" stroke="#1f427a" stroke-width="1" />
+      <line x1="8" y1="21" x2="110" y2="21" stroke="#254a85" stroke-width="1" stroke-dasharray="3 3" />
+      <circle cx="130" cy="21" r="3.5" class="led-g" />
+      <circle cx="146" cy="21" r="3.5" class="led-c" filter="url(#termGlow)" />
+      <circle cx="162" cy="21" r="3.5" class="led-c" />
+      <circle cx="178" cy="21" r="3.5" class="led-g" filter="url(#termGlow)" />
+      <text x="12" y="15" class="code-font" font-size="9" fill="#4facfe" font-weight="700">NODE 04: REDIS-CACHE</text>
+    </g>
+
+    <!-- Metrics Mini-Box inside Left Panel -->
+    <g transform="translate(12, 226)">
+      <rect x="0" y="0" width="196" height="50" rx="4" fill="#091122" stroke="#16294a" stroke-width="1" />
+      <text x="10" y="18" class="code-font" font-size="9" fill="#5879a8">CPU CORE USAGE</text>
+      <!-- Mini Progress Bar -->
+      <rect x="10" y="25" width="176" height="6" rx="3" fill="#13233f" />
+      <rect x="10" y="25" width="75" height="6" rx="3" fill="url(#accentCyanPink)" />
+      <text x="10" y="42" class="code-font" font-size="8.5" fill="#00ff9d">RAM: 4.8GB / 64GB [HEALTHY]</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Animated NeoFetch Terminal Telemetry -->
+  <g transform="translate(280, 58)" class="code-font">
+    <!-- Command Execution Line -->
+    <g transform="translate(0, 18)">
+      <text x="0" y="0" font-size="13" fill="#00ff9d" font-weight="700">sohrab@hypercloud</text>
+      <text x="145" y="0" font-size="13" fill="#5e7da8">:</text>
+      <text x="155" y="0" font-size="13" fill="#b827fc" font-weight="600">~</text>
+      <text x="170" y="0" font-size="13" fill="#ffffff">$ neofetch --profile=backend-devops</text>
+    </g>
+
+    <line x1="0" y1="28" x2="570" y2="28" stroke="#192d52" stroke-width="1" />
+
+    <!-- Neofetch Data Rows -->
+    <g font-size="11.8" letter-spacing="0.4">
+      <!-- Line 1: Identity / Host -->
+      <g transform="translate(0, 52)" class="line-anim-1">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">DEVELOPER</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#ffffff" font-weight="700">Sohrab Darabi <tspan fill="#f246fe">(Senior Backend Engineer)</tspan></text>
+      </g>
+
+      <!-- Line 2: Operating System / Platform -->
+      <g transform="translate(0, 74)" class="line-anim-2">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">RUNTIME</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#e0ecff">Debian / Alpine Linux Containers // Darwin</text>
+      </g>
+
+      <!-- Line 3: Core Languages -->
+      <g transform="translate(0, 96)" class="line-anim-3">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">LANGUAGES</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#00ffb3" font-weight="600">Go (Golang), Python, Rust, TypeScript, Bash</text>
+      </g>
+
+      <!-- Line 4: Architecture & Paradigm -->
+      <g transform="translate(0, 118)" class="line-anim-4">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">SYSTEM ARCH</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#e0ecff">Microservices, Event-Driven, High-Concurrency, gRPC</text>
+      </g>
+
+      <!-- Line 5: Cloud & Containers -->
+      <g transform="translate(0, 140)" class="line-anim-5">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">CLOUD / OPS</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#e0ecff">Kubernetes, Docker, Terraform, AWS, CI/CD Actions</text>
+      </g>
+
+      <!-- Line 6: Databases & Streaming -->
+      <g transform="translate(0, 162)" class="line-anim-6">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">DATA / MESH</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#e0ecff">PostgreSQL, Redis, Apache Kafka, Elasticsearch, RabbitMQ</text>
+      </g>
+
+      <!-- Line 7: Telemetry & Monitoring -->
+      <g transform="translate(0, 184)" class="line-anim-7">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">MONITORING</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#e0ecff">Prometheus, Grafana, OpenTelemetry, Loki</text>
+      </g>
+
+      <!-- Line 8: Focus / Passion -->
+      <g transform="translate(0, 206)" class="line-anim-8">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">CORE FOCUS</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#b827fc" font-weight="600">Zero-downtime scalability, low-latency APIs &amp; automation</text>
+      </g>
+
+      <!-- Line 9: Status Beacon -->
+      <g transform="translate(0, 228)" class="line-anim-9">
+        <text x="0" y="0" fill="#00f2fe" font-weight="700">STATUS</text>
+        <text x="110" y="0" fill="#718fb8">:</text>
+        <text x="125" y="0" fill="#00ff9d" font-weight="700">● AVAILABLE FOR HIGH-IMPACT BACKEND &amp; DEVOPS ROLES</text>
+      </g>
+    </g>
+
+    <!-- Color Palette Swatches at Bottom of Terminal -->
+    <g transform="translate(0, 260)" class="line-anim-10">
+      <rect x="0" y="0" width="34" height="14" rx="2" fill="#00f2fe" />
+      <rect x="40" y="0" width="34" height="14" rx="2" fill="#00ffb3" />
+      <rect x="80" y="0" width="34" height="14" rx="2" fill="#7928ca" />
+      <rect x="120" y="0" width="34" height="14" rx="2" fill="#b827fc" />
+      <rect x="160" y="0" width="34" height="14" rx="2" fill="#f246fe" />
+      <rect x="200" y="0" width="34" height="14" rx="2" fill="#ffbd2e" />
+      <rect x="240" y="0" width="34" height="14" rx="2" fill="#ffffff" />
+
+      <!-- Blinking Terminal Prompt Cursor -->
+      <g transform="translate(300, 11)">
+        <text x="0" y="0" fill="#00ff9d" font-size="12" font-weight="700">sohrab@hypercloud:~$</text>
+        <rect x="160" y="-10" width="8" height="14" fill="#00f2fe" class="cursor" />
+      </g>
+    </g>
+  </g>
+</svg>

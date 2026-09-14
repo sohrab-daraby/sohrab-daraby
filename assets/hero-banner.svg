@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" width="100%" height="330">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="45%" stop-color="#080e1e" />
+      <stop offset="100%" stop-color="#04060d" />
+    </linearGradient>
+
+    <!-- Neon Glow Gradients -->
+    <linearGradient id="cyanPurpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="45%" stop-color="#4facfe" />
+      <stop offset="75%" stop-color="#b827fc" />
+      <stop offset="100%" stop-color="#f246fe" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffb3" />
+      <stop offset="100%" stop-color="#00c8ff" />
+    </linearGradient>
+
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="40%" stop-color="#00f2fe" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0.45" />
+    </linearGradient>
+
+    <radialGradient id="hologramOrb" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#7928ca" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="ambientCyan" cx="15%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters for Neon Glow -->
+    <filter id="neonCyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="laserGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Pattern for Cyber Tech Grid -->
+    <pattern id="dotPattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#00f2fe" fill-opacity="0.12" />
+    </pattern>
+
+    <style>
+      @keyframes scanlineMove {
+        0% { transform: translateY(-10px); opacity: 0; }
+        20% { opacity: 0.6; }
+        80% { opacity: 0.6; }
+        100% { transform: translateY(340px); opacity: 0; }
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.6)); }
+        50% { opacity: 1; filter: drop-shadow(0 0 20px rgba(184, 39, 252, 0.9)); }
+      }
+
+      @keyframes beaconBlink {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.9); }
+      }
+
+      @keyframes streamPacket {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes soundwaveAnim1 { 0%, 100% { height: 6px; y: 294px; } 50% { height: 26px; y: 274px; } }
+      @keyframes soundwaveAnim2 { 0%, 100% { height: 18px; y: 282px; } 50% { height: 8px; y: 292px; } }
+      @keyframes soundwaveAnim3 { 0%, 100% { height: 10px; y: 290px; } 50% { height: 32px; y: 268px; } }
+      @keyframes soundwaveAnim4 { 0%, 100% { height: 24px; y: 276px; } 50% { height: 12px; y: 288px; } }
+      @keyframes soundwaveAnim5 { 0%, 100% { height: 12px; y: 288px; } 50% { height: 28px; y: 272px; } }
+      @keyframes floatHex {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-7px) rotate(4deg); }
+      }
+
+      .title-glow {
+        animation: pulseGlow 4s ease-in-out infinite;
+      }
+      .beacon {
+        animation: beaconBlink 1.8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .circuit-line {
+        stroke-dasharray: 60 140;
+        animation: streamPacket 4s linear infinite;
+      }
+      .circuit-line-fast {
+        stroke-dasharray: 40 100;
+        animation: streamPacket 2.5s linear infinite;
+      }
+      .scanline {
+        animation: scanlineMove 6s linear infinite;
+      }
+      .floating {
+        animation: floatHex 5s ease-in-out infinite;
+      }
+
+      .eq-bar-1 { animation: soundwaveAnim1 0.8s ease-in-out infinite; }
+      .eq-bar-2 { animation: soundwaveAnim3 0.65s ease-in-out infinite; }
+      .eq-bar-3 { animation: soundwaveAnim2 0.9s ease-in-out infinite; }
+      .eq-bar-4 { animation: soundwaveAnim4 0.75s ease-in-out infinite; }
+      .eq-bar-5 { animation: soundwaveAnim1 0.6s ease-in-out infinite 0.2s; }
+      .eq-bar-6 { animation: soundwaveAnim5 0.85s ease-in-out infinite 0.1s; }
+      .eq-bar-7 { animation: soundwaveAnim3 0.7s ease-in-out infinite 0.3s; }
+      .eq-bar-8 { animation: soundwaveAnim2 0.8s ease-in-out infinite 0.15s; }
+      .eq-bar-9 { animation: soundwaveAnim4 0.95s ease-in-out infinite 0.05s; }
+      .eq-bar-10 { animation: soundwaveAnim1 0.7s ease-in-out infinite 0.25s; }
+      .eq-bar-11 { animation: soundwaveAnim5 0.85s ease-in-out infinite 0.1s; }
+      .eq-bar-12 { animation: soundwaveAnim3 0.65s ease-in-out infinite 0.35s; }
+
+      .mono-text {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', monospace;
+      }
+      .sans-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="900" height="330" rx="14" fill="url(#bgGrad)" stroke="#1a2642" stroke-width="1.5" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="450" cy="130" r="320" fill="url(#hologramOrb)" />
+  <circle cx="150" cy="80" r="220" fill="url(#ambientCyan)" />
+
+  <!-- Dot Grid Pattern -->
+  <rect x="0" y="0" width="900" height="330" rx="14" fill="url(#dotPattern)" />
+
+  <!-- Perspective 3D Grid Floor at Bottom -->
+  <g opacity="0.65">
+    <line x1="0" y1="280" x2="900" y2="280" stroke="#00f2fe" stroke-opacity="0.25" stroke-width="1" />
+    <line x1="0" y1="298" x2="900" y2="298" stroke="#00f2fe" stroke-opacity="0.35" stroke-width="1" />
+    <line x1="0" y1="316" x2="900" y2="316" stroke="#7928ca" stroke-opacity="0.5" stroke-width="1.2" />
+
+    <!-- Vanishing Lines to Center -->
+    <line x1="450" y1="240" x2="-50" y2="330" stroke="#00f2fe" stroke-opacity="0.18" stroke-width="1" />
+    <line x1="450" y1="240" x2="100" y2="330" stroke="#00f2fe" stroke-opacity="0.22" stroke-width="1" />
+    <line x1="450" y1="240" x2="250" y2="330" stroke="#00f2fe" stroke-opacity="0.25" stroke-width="1" />
+    <line x1="450" y1="240" x2="400" y2="330" stroke="#00f2fe" stroke-opacity="0.28" stroke-width="1" />
+    <line x1="450" y1="240" x2="500" y2="330" stroke="#00f2fe" stroke-opacity="0.28" stroke-width="1" />
+    <line x1="450" y1="240" x2="650" y2="330" stroke="#00f2fe" stroke-opacity="0.25" stroke-width="1" />
+    <line x1="450" y1="240" x2="800" y2="330" stroke="#00f2fe" stroke-opacity="0.22" stroke-width="1" />
+    <line x1="450" y1="240" x2="950" y2="330" stroke="#00f2fe" stroke-opacity="0.18" stroke-width="1" />
+  </g>
+
+  <!-- Flowing Circuit Board Traces with Animated Packets -->
+  <g fill="none" opacity="0.8">
+    <path d="M 40 180 L 120 180 L 160 220 L 290 220" stroke="#1c3052" stroke-width="2" />
+    <path d="M 40 180 L 120 180 L 160 220 L 290 220" stroke="#00f2fe" stroke-width="2.5" class="circuit-line" filter="url(#laserGlow)" />
+
+    <path d="M 900 110 L 780 110 L 730 60 L 580 60" stroke="#251a4a" stroke-width="2" />
+    <path d="M 900 110 L 780 110 L 730 60 L 580 60" stroke="#b827fc" stroke-width="2.5" class="circuit-line-fast" filter="url(#laserGlow)" />
+
+    <path d="M 880 230 L 770 230 L 730 260 L 620 260" stroke="#163840" stroke-width="2" />
+    <path d="M 880 230 L 770 230 L 730 260 L 620 260" stroke="#00ffb3" stroke-width="2.2" class="circuit-line" filter="url(#laserGlow)" />
+  </g>
+
+  <!-- Top Cyber HUD Header -->
+  <g class="mono-text" font-size="11" letter-spacing="1.5">
+    <rect x="30" y="24" width="840" height="34" rx="6" fill="#0b1326" fill-opacity="0.75" stroke="#1d2e54" stroke-width="1" />
+
+    <!-- Status Beacon Indicator -->
+    <circle cx="52" cy="41" r="5" fill="#00ff9d" class="beacon" filter="url(#laserGlow)" />
+    <circle cx="52" cy="41" r="9" stroke="#00ff9d" stroke-opacity="0.3" fill="none" />
+    <text x="68" y="45" fill="#00ff9d" font-weight="700">CLUSTER // ONLINE</text>
+
+    <!-- Mid telemetry items -->
+    <text x="260" y="45" fill="#718bb0">UPTIME: <tspan fill="#00f2fe" font-weight="600">99.998%</tspan></text>
+    <text x="440" y="45" fill="#718bb0">LATENCY: <tspan fill="#00f2fe" font-weight="600">0.42ms</tspan></text>
+    <text x="615" y="45" fill="#718bb0">ARCH: <tspan fill="#b827fc" font-weight="600">K8S // DISTRIBUTED</tspan></text>
+
+    <!-- Top Right ID Tag -->
+    <rect x="785" y="29" width="75" height="24" rx="4" fill="#00f2fe" fill-opacity="0.12" stroke="#00f2fe" stroke-opacity="0.4" />
+    <text x="797" y="45" fill="#00f2fe" font-weight="700">v4.8.0</text>
+  </g>
+
+  <!-- Center Holographic Brand Identity -->
+  <g transform="translate(50, 80)">
+    <!-- Floating Hexagon Decorator -->
+    <g class="floating" transform="translate(730, 40)">
+      <polygon points="28,0 56,16 56,48 28,64 0,48 0,16" fill="#0c1730" stroke="#00f2fe" stroke-width="1.8" filter="url(#laserGlow)" stroke-opacity="0.8" />
+      <polygon points="28,8 48,20 48,44 28,56 8,44 8,20" fill="none" stroke="#7928ca" stroke-width="1.2" stroke-opacity="0.6" />
+      <!-- Inner Cloud/Server Glyph -->
+      <path d="M 20 32 C 18 32 16 30 16 28 C 16 26 18 24 20 24 C 21 21 24 19 28 19 C 32 19 35 21 36 24 C 38 24 40 26 40 28 C 40 30 38 32 36 32 Z" fill="#00f2fe" opacity="0.9" />
+      <circle cx="28" cy="38" r="1.5" fill="#00ffb3" />
+    </g>
+
+    <!-- Terminal Prompt Line -->
+    <text x="0" y="24" class="mono-text" font-size="13" fill="#00ffb3" font-weight="600" letter-spacing="1">
+      <tspan fill="#7928ca">root@hyperspace:~$</tspan> ./init_engineer_profile.sh --target=production
+    </text>
+
+    <!-- Main Big Name -->
+    <g class="title-glow">
+      <text x="0" y="78" class="sans-text" font-size="44" font-weight="900" letter-spacing="3" fill="url(#cyanPurpleGrad)">
+        SOHRAB DARABI
+      </text>
+    </g>
+
+    <!-- Subtitle / Role Badge Bar -->
+    <g transform="translate(0, 96)">
+      <text x="0" y="16" class="mono-text" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="2">
+        SR. BACKEND &amp; CLOUD DEVOPS ARCHITECT
+      </text>
+      <text x="0" y="40" class="mono-text" font-size="12" fill="#88a0c7" letter-spacing="1">
+        High-Throughput Distributed Microservices // Scalable Cloud Infrastructure // Zero-Downtime CI/CD
+      </text>
+    </g>
+
+    <!-- High-Tech Pill Badges -->
+    <g transform="translate(0, 155)" class="mono-text" font-size="11">
+      <!-- Badge 1: GO / RUST / PYTHON -->
+      <rect x="0" y="0" width="125" height="26" rx="13" fill="#0b172e" stroke="#00f2fe" stroke-width="1.2" />
+      <circle cx="14" cy="13" r="3.5" fill="#00f2fe" />
+      <text x="26" y="17" fill="#cbe7ff" font-weight="600">GO // PYTHON</text>
+
+      <!-- Badge 2: K8S / CLOUD -->
+      <rect x="135" y="0" width="145" height="26" rx="13" fill="#140f2b" stroke="#b827fc" stroke-width="1.2" />
+      <circle cx="149" cy="13" r="3.5" fill="#b827fc" />
+      <text x="161" y="17" fill="#eed5ff" font-weight="600">KUBERNETES // AWS</text>
+
+      <!-- Badge 3: DISTRIBUTED / KAFKA -->
+      <rect x="290" y="0" width="155" height="26" rx="13" fill="#0a1c1a" stroke="#00ffb3" stroke-width="1.2" />
+      <circle cx="304" cy="13" r="3.5" fill="#00ffb3" />
+      <text x="316" y="17" fill="#ccffe8" font-weight="600">KAFKA // TERRAFORM</text>
+    </g>
+  </g>
+
+  <!-- Live Audio Equalizer / System Frequency Visualizer (Bottom-Right) -->
+  <g transform="translate(680, 0)">
+    <rect x="-10" y="258" width="180" height="48" rx="8" fill="#060c18" fill-opacity="0.85" stroke="#1a2d52" stroke-width="1" />
+    <text x="0" y="272" class="mono-text" font-size="9" fill="#00f2fe" font-weight="700" letter-spacing="1">TELEMETRY FREQ</text>
+    <text x="120" y="272" class="mono-text" font-size="9" fill="#00ff9d" font-weight="700">60 FPS</text>
+
+    <!-- Equalizer Dynamic Bars -->
+    <g fill="#00f2fe" opacity="0.9" filter="url(#laserGlow)">
+      <rect x="0" width="7" rx="3.5" class="eq-bar-1" fill="#00f2fe" />
+      <rect x="12" width="7" rx="3.5" class="eq-bar-2" fill="#20e2fe" />
+      <rect x="24" width="7" rx="3.5" class="eq-bar-3" fill="#3cd1fe" />
+      <rect x="36" width="7" rx="3.5" class="eq-bar-4" fill="#58c1fe" />
+      <rect x="48" width="7" rx="3.5" class="eq-bar-5" fill="#7d9afe" />
+      <rect x="60" width="7" rx="3.5" class="eq-bar-6" fill="#997bfe" />
+      <rect x="72" width="7" rx="3.5" class="eq-bar-7" fill="#b827fc" />
+      <rect x="84" width="7" rx="3.5" class="eq-bar-8" fill="#c938fc" />
+      <rect x="96" width="7" rx="3.5" class="eq-bar-9" fill="#d94bfc" />
+      <rect x="108" width="7" rx="3.5" class="eq-bar-10" fill="#00ffb3" />
+      <rect x="120" width="7" rx="3.5" class="eq-bar-11" fill="#25ffbf" />
+      <rect x="132" width="7" rx="3.5" class="eq-bar-12" fill="#54ffcd" />
+    </g>
+  </g>
+
+  <!-- Futuristic Corner Cyber Brackets -->
+  <g stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M 12 28 L 12 12 L 28 12" />
+    <path d="M 888 28 L 888 12 L 872 12" />
+    <path d="M 12 302 L 12 318 L 28 318" />
+    <path d="M 888 302 L 888 318 L 872 318" />
+  </g>
+
+  <!-- Animated Neon Laser Scan Line -->
+  <line x1="14" y1="0" x2="886" y2="0" stroke="url(#cyanPurpleGrad)" stroke-width="1.8" filter="url(#neonCyanGlow)" class="scanline" />
+</svg>
